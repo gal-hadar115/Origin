@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from qa5_selenium.Calc_Page import Calc_Page
 
-service_chrome = Service(r"C:\selenium1\chromedriver.exe")
+service_chrome = Service(r"C:\Users\Gal's PC\Desktop\Selenium_Drivers\chromedriver.exe")
 #service_firefox = Service(r"C:\selenium1\geckodriver.exe")
 
 driver = webdriver.Chrome(service=service_chrome)

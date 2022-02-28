@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 
-service_chrome = Service(r"C:\selenium1\chromedriver.exe")
+service_chrome = Service(r"C:\Users\Gal's PC\Desktop\Selenium_Drivers\chromedriver.exe")
 #service_firefox = Service(r"C:\selenium1\geckodriver.exe")
 
 driver = webdriver.Chrome(service=service_chrome)
@@ -19,7 +19,7 @@ driver.maximize_window()
 
 # In case an element is not found on the page, will try again for 10 seconds
 # before we get an error message
-#driver.implicitly_wait(10)
+driver.implicitly_wait(10)
 
 # First number
 num1 = driver.find_element(By.CSS_SELECTOR,"[ng-model='first']")

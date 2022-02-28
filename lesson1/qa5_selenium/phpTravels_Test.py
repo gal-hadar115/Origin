@@ -7,11 +7,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 
-#service_chrome = Service(r"C:\selenium1\chromedriver.exe")
-service_firefox = Service(r"C:\selenium1\geckodriver.exe")
+service_chrome = Service(r"C:\Users\Gal's PC\Desktop\Selenium_Drivers\chromedriver.exe")
+#service_firefox = Service(r"C:\selenium1\geckodriver.exe")
 
-#driver = webdriver.Chrome(service=service_chrome)
-driver = webdriver.Firefox(service=service_firefox)
+driver = webdriver.Chrome(service=service_chrome)
+#driver = webdriver.Firefox(service=service_firefox)
 
 driver.get("https://phptravels.net/api/admin")
 driver.maximize_window()
@@ -44,8 +44,8 @@ else:
 wait = WebDriverWait(driver,10)
 
 # wait.until(EC.element_to_be_clickable((By.ID,"dropdownMenuProfile")))
-# wait.until(EC.invisibility_of_element_located((By.CSS_SELECTOR,"div[class='bodyload']")))
-
+wait.until(EC.invisibility_of_element_located((By.CSS_SELECTOR,"div[class='bodyload']")))
+driver.find_element(By.ID,"dropdownMenuProfile").click()
 while True:
     try:
         driver.find_element(By.ID,"dropdownMenuProfile").click()
