@@ -7,7 +7,7 @@ from time import sleep
 from AOS_Selenium.AOS_HomePage_POM import HomePage
 from AOS_Categories_POM import Categories
 from AOS_Items_POM import Items
-from AOS_Cart_POM import Cart
+from AOS_Cart_Window_POM import Cart
 
 
 service_chrome = Service(r"C:\chromedriver.exe")

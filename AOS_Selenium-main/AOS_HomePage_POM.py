@@ -27,6 +27,7 @@ class HomePage:
         return self.driver.find_element(By.ID, 'miceImg')
 
     def homepage_icon(self):
+        self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div/a[@href='#/'][@role='link']")))
         return self.driver.find_element(By.XPATH, "//div/a[@href='#/'][@role='link']")
 
 # ================================NAVIGATION STARTS HERE====================================

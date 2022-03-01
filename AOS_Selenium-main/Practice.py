@@ -8,7 +8,9 @@ from time import sleep
 from AOS_HomePage_POM import HomePage
 from AOS_Categories_POM import Categories
 from AOS_Items_POM import Items
-from AOS_Cart_POM import Cart
+from AOS_Cart_Window_POM import Cart_Window
+from AOS_Cart_Page_POM import Cart_Page
+from AOS_My_Orders_POM import My_Orders
 
 service_chrome = Service(r"C:\Users\Gal's PC\Desktop\Selenium_Drivers\chromedriver.exe")
 driver = webdriver.Chrome(service=service_chrome)
@@ -16,7 +18,9 @@ driver = webdriver.Chrome(service=service_chrome)
 homepage = HomePage(driver)
 categories = Categories(driver)
 item = Items(driver)
-cart = Cart(driver)
+cart = Cart_Window(driver)
+cart_page = Cart_Page(driver)
+my_orders = My_Orders(driver)
 driver.get("https://advantageonlineshopping.com/#/")
 #driver.maximize_window()
 
@@ -55,10 +59,22 @@ driver.implicitly_wait(10)
 # else:
 #     print(f'Test failed! There are {cart.cart_items_from_nav()} items in cart instead')
 
-homepage.mice().click()
-categories.mice_items(0)
-item.item_flow(1,'BLACK')
-sleep(1)
-print(cart.cart_items_name())
-print(cart.cart_items_quantity())
-print(cart.cart_items_color())
+# homepage.tablets().click()
+# categories.tablets_items(1)
+# item.item_flow(2,'BLACK')
+# cart.cart_button().click()
+# print(cart_page.cart_page_qty(0))
+# sleep(1)
+# cart_page.item_edit_in_cart(0).click()
+# sleep(1)
+# item.change_quantity(1)
+# sleep(1)
+# cart.cart_button().click()
+# print(cart_page.cart_page_qty(0))
+
+
+
+
+
+
+
